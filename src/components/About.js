@@ -1,5 +1,5 @@
 import React from "react";
-import { Typography, Row, Col, Card, Button } from "antd";
+import { Typography, Row, Col, Card,} from "antd";
 import { motion } from "framer-motion";
 
 const { Title, Paragraph } = Typography;

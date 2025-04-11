@@ -12,12 +12,6 @@ import { Link } from "react-scroll";
 const { Header } = Layout;
 
 function Navbar() {
-  const [current, setCurrent] = useState("2");
-
-  const handleClick = (e) => {
-    setCurrent(e.key);
-  };
-
   return (
     <Header
       style={{
@@ -47,7 +41,6 @@ function Navbar() {
         <Menu
           theme="dark"
           mode="horizontal"
-          onClick={handleClick}
           style={{
             display: "flex",
             justifyContent: "flex-end",

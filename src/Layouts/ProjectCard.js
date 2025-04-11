@@ -1,7 +1,7 @@
 import React from "react";
 import { Card, Typography, Button } from "antd";
 
-const { Title, Paragraph } = Typography;
+const {Paragraph } = Typography;
 
 const ProjectCard = ({ project }) => {
   return (

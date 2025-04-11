@@ -27,7 +27,7 @@ function Contact() {
     }
 
     try {
-      const response = await emailjs.send(
+      await emailjs.send(
         "service_pz51c8s",
         "template_qb1nqpp"
         , 

@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
-import { Layout, Typography } from 'antd';
+import { Layout,} from 'antd';
 import Navbar from './components/Navbar';
 import About from './components/About';
 import Contact from './components/Contact';
