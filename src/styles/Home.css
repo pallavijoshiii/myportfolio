@@ -1,0 +1,115 @@
+.home-container {
+  text-align: center;
+  min-height: 72vh;
+  display: flex;
+  align-items: center;
+  background: #f7f9fc;
+  padding: 30px 10px;
+}
+
+.home-row {
+  width: 100%;
+}
+
+.intro-text {
+  padding: 20px;
+}
+
+.home-title {
+  font-size: 48px;
+  color: #001529;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 20px;
+}
+
+.highlight-text {
+  color: #033665;
+}
+
+.highlight-text2 {
+  color: #0a4d8b;
+  font-weight: 600;
+}
+
+.home-paragraph {
+  font-size: 20px;
+  color: #444;
+  max-width: 750px;
+  margin: 0 auto 40px;
+  line-height: 1.7;
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+}
+
+.home-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+/* Contact Button */
+.contact-btn {
+  background-color: #0a6593;
+  font-size: 16px;
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: all 0.3s ease-in-out;
+  text-transform: uppercase;
+}
+
+.contact-btn:hover {
+  background-color: #074463 !important;
+  border-color: #02324a !important;
+  transform: translateY(-4px);
+}
+
+/* Resume Button */
+.resume-btn {
+  background: transparent;
+  color: #0a6593;
+  border: 2px solid #0a6593;
+  font-size: 16px;
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: all 0.3s ease-in-out;
+  text-transform: uppercase;
+}
+
+.resume-btn:hover {
+  background-color: #0a6593;
+  color: white;
+  transform: translateY(-4px);
+}
+
+/* Resume Link (for accessibility) */
+.resume-link {
+  text-decoration: none;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .home-title {
+    font-size: 32px;
+  }
+
+  .home-paragraph {
+    font-size: 18px;
+  }
+
+  .home-buttons {
+    flex-direction: column;
+  }
+
+  .contact-btn,
+  .resume-btn {
+    width: 100%;
+    padding: 12px;
+  }
+}
