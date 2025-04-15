@@ -41,12 +41,6 @@ function Projects() {
       description: 'A backend project built to learn server setup, API creation, and database integration.',
       link: 'https://github.com/pallavijoshiii/Mini_Project_backend',
     }
-    
-    
-    
-    
-    
-    
   ];
 
   return (

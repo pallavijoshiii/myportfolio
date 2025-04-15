@@ -18,7 +18,7 @@ function Skills() {
         </Col>
         <Col span={12}>
           <Title level={4} style={{ color: '#141515',fontFamily: "'Poppins', sans-serif", }}>Node.js</Title>
-          <Progress percent={55} strokeColor="#FF5722" />
+          <Progress percent={50} strokeColor="#FF5722" />
         </Col>
         <Col span={12}>
           <Title level={4} style={{ color: '#141515',fontFamily: "'Poppins', sans-serif", }}>CSS</Title>

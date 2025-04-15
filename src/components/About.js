@@ -1,11 +1,10 @@
 import React from "react";
-import { Typography, Row, Col, Card,} from "antd";
+import { Typography, Row, Col, Card } from "antd";
 import { motion } from "framer-motion";
 
 const { Title, Paragraph } = Typography;
 
 function About() {
-
   return (
     <div style={{ color: "#F4F4F4" }}>
       <Title
@@ -19,7 +18,7 @@ function About() {
         About Me
       </Title>
       <Row gutter={16} justify="center">
-        <Col xs={24} sm={12}>
+        <Col xs={24} sm={12}  style={{marginTop:'8px'}}>
           {/* Personal Bio Card */}
           <motion.div
             initial={{ opacity: 0, y: -100 }}
@@ -51,16 +50,15 @@ function About() {
                 }}
               >
                 I’m Pallavi Joshi, a Web Developer with a Bachelor's in
-                Education and a Yoga certification. I specialize in React.js for
-                front-end development and am proficient in Node.js and Express.js
-                for building backend systems. I also have experience with MongoDB,
-                HTML, and CSS, focusing on creating responsive and scalable web
-                applications.
+                Education. I specialize in React.js for front-end development
+                and am proficient in Node.js and Express.js for building backend
+                systems. I also have experience with MongoDB, HTML, and CSS,
+                focusing on creating responsive and scalable web applications.
               </Paragraph>
             </Card>
           </motion.div>
         </Col>
-        <Col xs={24} sm={12}>
+        <Col xs={24} sm={12} style={{marginTop:'8px'}}>
           {/* Timeline Card */}
           <motion.div
             initial={{ opacity: 0, y: -100 }}
@@ -98,8 +96,7 @@ function About() {
                 <br />
                 - 2025: Currently working as a Full-Stack Developer at Pinaka
                 Software Solutions.
-                <br />
-                - 2025: Graduated with a Bachelor's degree in Education.
+                <br />- 2025: Graduated with a Bachelor's degree in Education.
               </Paragraph>
             </Card>
           </motion.div>
