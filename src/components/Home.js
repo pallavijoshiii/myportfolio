@@ -6,7 +6,7 @@ import '../styles/Home.css';
 const { Title, Paragraph } = Typography;
 
 function Home() {
-  const resumePath = "/myresume.pdf";
+  const resumePath = "/pallavijoshiResume.pdf";
 
   return (
     <div className="home-container">

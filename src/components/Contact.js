@@ -6,16 +6,13 @@ const { Title } = Typography;
 
 function Contact() {
   const [messageStatus, setMessageStatus] = useState(null); 
+  const [loading, setLoading] = useState(false); 
+
 
   // Form submission handler
   const onFinish = async (values) => {
-    if (!values.name || !values.email || !values.message) {
-      setMessageStatus({
-        type: "error",
-        message: "All fields are required. Please fill in all the fields.",
-      });
-      return; 
-    }
+    setMessageStatus(null); 
+    setLoading(true); 
 
     const emailRegex = /^[a-zA-Z0-9._-]+@[a-zAZ0-9.-]+\.[a-zA-Z]{2,6}$/;
     if (!emailRegex.test(values.email)) {
@@ -27,17 +24,18 @@ function Contact() {
     }
 
     try {
-      await emailjs.send(
-        "service_pz51c8s",
-        "template_qb1nqpp"
+     const result =  await emailjs.send(
+        "service_pz51c8s",//service
+        "template_qb1nqpp"//template
         , 
-                {
+        {
           name: values.name,
           email: values.email,
           message: values.message,
         },
-        "rAHVlrdJwGCQ_dYSu" 
-      )
+        "rAHVlrdJwGCQ_dYSu" //public key
+      );
+      console.log("EmailJS result:", result); // Debug log
 
       setMessageStatus({
         type: "success",
@@ -51,6 +49,7 @@ function Contact() {
         duration: 3,
       });
     } catch (error) {
+      console.error("EmailJS error:", error); // Debug log
       setMessageStatus({
         type: "error",
         message: "There was an issue sending your message. Please try again.",
@@ -62,6 +61,8 @@ function Contact() {
         placement: "topRight",
         duration: 3,
       });
+    } finally {
+      setLoading(false); // Re-enable button
     }
   };
 
@@ -106,7 +107,6 @@ function Contact() {
               message: "Please enter a valid email address!", 
             },
           ]}
-          required={false} 
         >
           <Input
           placeholder="your@email.com"
@@ -121,7 +121,6 @@ function Contact() {
           name="message"
           label="Msg"
           rules={[{ required: true, message: "Message is required!" }]} 
-          required={false} 
         >
           <Input.TextArea
           placeholder="Write your message here..."
@@ -153,6 +152,8 @@ function Contact() {
           <Button
             type="primary"
             htmlType="submit"
+            loading={loading} // <-- NEW
+            disabled={loading} // <-- NEW
             style={{
               backgroundColor: "#09577e",
               borderColor: "#074463",
@@ -166,8 +167,8 @@ function Contact() {
             onMouseEnter={(e) => (e.target.style.backgroundColor = "#074463")}
             onMouseLeave={(e) => (e.target.style.backgroundColor = "#09577e")}
           >
-            Submit
-          </Button>
+            {loading ? "Sending..." : "Submit"}
+            </Button>
         </Form.Item>
       </Form>
     </div>
